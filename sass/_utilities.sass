@@ -1,0 +1,58 @@
+@use 'variables' as v
+  
+//Mixins
+
+@mixin reset
+  *
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Overpass', sans-serif
+
+@mixin container-reset
+  max-width: 450px
+  padding: 2rem 1.5rem
+  background: v.$ContainerBlue
+  border-radius: 0.625rem
+
+  @media (max-widht: 500px)
+    padding: 2rem 0.8rem
+
+
+//Placeholder selector
+
+%btn-format
+  width: 3rem
+  height: 3rem
+  color: v.$White
+  background-color: v.$DarkBlue
+  border: none
+  outline: none
+  padding-top: 0.3rem
+  transition: 0.3s
+  border-radius: 50%
+  cursor: pointer
+
+  &:hover
+    background-color: v.$LightGrey
+
+  &:focus
+    background-color: v.$Primary
+
+
+%btnSubmit-format
+  background-color: v.$Primary
+  padding: 0.625rem 2rem 0.5rem
+  width: 100%
+  border: none
+  border-radius: 30px
+  color: v.$White
+  margin-top: 2rem
+  text-transform: uppercase
+  letter-spacing: 0.2rem
+  font-size: 0.9rem
+  transition: .5s
+
+  &:hover
+    background-color: v.$White
+    color: v.$Primary
